@@ -1,6 +1,6 @@
 ---
 - name: Deploy and start Apache HTTPD service
-  hosts: webserver
+  hosts: all
   vars:
     web_pkg: httpd
     firewall_pkg: firewalld
