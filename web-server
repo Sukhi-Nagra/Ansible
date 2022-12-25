@@ -1,9 +1,21 @@
----
-- name: Install Apache Web Server
+--
+- name: Apache server installed
   hosts: all
+
   tasks:
-  - name: Installing Http Server
-    yum: 
+  - name: latest Apache version installed
+    yum:
       name: httpd
-      state: present
-   
+      state: latest
+
+  - name: latest firewalld version installed
+    yum:
+      name: firewalld
+      state: latest
+
+  - name: firewalld enabled and running
+    service:
+      name: firewalld
+      enabled: true
+      state: started
+
