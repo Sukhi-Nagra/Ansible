@@ -1,7 +1,6 @@
---
+---
 - name: Apache server installed
   hosts: all
-
   tasks:
   - name: latest Apache version installed
     yum:
